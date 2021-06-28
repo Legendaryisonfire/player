@@ -8,6 +8,7 @@ local player = Instance.new("ScrollingFrame")
 local blockextender = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local titanshifter = Instance.new("TextButton")
+local glitchfix = Instance.new("TextButton")
 
 --Properties:
 
@@ -103,4 +104,21 @@ titanshifter.MouseButton1Down:connect(function()
 			end
 		end
 	end)
+end)
+
+glitchfix.Name = "glitchfix"
+glitchfix.Parent = player
+glitchfix.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+glitchfix.Position = UDim2.new(-0.00288806856, 0, 0.0539877303, 0)
+glitchfix.Size = UDim2.new(0, 200, 0, 38)
+glitchfix.Font = Enum.Font.GothamBold
+glitchfix.Text = "Glitch Fix"
+glitchfix.TextColor3 = Color3.fromRGB(255, 255, 255)
+glitchfix.TextScaled = true
+glitchfix.TextSize = 14.000
+glitchfix.TextWrapped = true
+glitchfix.MouseButton1Down:connect(function()
+	local ballweld = game.Players.LocalPlayer.Character["ball.weld"]
+
+	ballweld:Destroy()
 end)
