@@ -9,6 +9,7 @@ local blockextender = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local titanshifter = Instance.new("TextButton")
 local glitchfix = Instance.new("TextButton")
+local reset = Instance.new("TextButton")
 
 --Properties:
 
@@ -121,4 +122,19 @@ glitchfix.MouseButton1Down:connect(function()
 	local ballweld = game.Players.LocalPlayer.Character["ball.weld"]
 
 	ballweld:Destroy()
+end)
+
+reset.Name = "reset"
+reset.Parent = player
+reset.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+reset.Position = UDim2.new(-0.00288806856, 0, 0.0809815973, 0)
+reset.Size = UDim2.new(0, 200, 0, 38)
+reset.Font = Enum.Font.GothamBold
+reset.Text = "Reset"
+reset.TextColor3 = Color3.fromRGB(255, 255, 255)
+reset.TextScaled = true
+reset.TextSize = 14.000
+reset.TextWrapped = true
+reset.MouseButton1Down:connect(function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
