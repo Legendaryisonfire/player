@@ -109,6 +109,7 @@ Mouse.KeyDown:Connect(function(Key)
         end
     end
 end)
+end)
 
 glitchfix.Name = "glitchfix"
 glitchfix.Parent = player
