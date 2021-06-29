@@ -84,27 +84,30 @@ titanshifter.TextScaled = true
 titanshifter.TextSize = 14.000
 titanshifter.TextWrapped = true
 titanshifter.MouseButton1Down:connect(function()
-	_G.Resized = false
+	game.StarterGui:SetCore("SendNotification", {
+                Title = "Titan Shifter By Legendary",
+                Text = "P to turn on and off"
+            })
+_G.Resized = false
 
-	local Player = game:GetService('Players').LocalPlayer
-	local Mouse = Player:GetMouse()
+local Player = game:GetService('Players').LocalPlayer
+local Mouse = Player:GetMouse()
 
-	Mouse.KeyDown:Connect(function(Key)
-		if Key == 'q' then
-			_G.Resized = not _G.Resized
-			if _G.Resized == true then
-				Player.Character['BodyHeightScale'].Value = Vector3.new(1.5)
-				Player.Character['BodyWidthScale'].Value = Vector3.new(1.5)
-				Player.Character['BodyDepthScale'].Value = Vector3.new(1.5)
-				Player.Character['HeadScale'].Value = Vector3.new(1)
-			elseif _G.Resized == false then
-				Player.Character['BodyHeightScale'].Value = Vector3.new(1)
-				Player.Character['BodyWidthScale'].Value = Vector3.new(1)
-				Player.Character['BodyDepthScale'].Value = Vector3.new(1)
-				Player.Character['HeadScale'].Value = Vector3.new(1)
-			end
-		end
-	end)
+Mouse.KeyDown:Connect(function(Key)
+    if Key == 'p' then
+        _G.Resized = not _G.Resized
+        if _G.Resized == true then
+            Player.Character.Humanoid.BodyHeightScale.Value = (1.5)--Change Value To Your Liking
+            Player.Character.Humanoid.BodyWidthScale.Value = (1.5)--Change Value To Your Liking
+            Player.Character.Humanoid.BodyDepthScale.Value = (1.5)--Change Value To Your Liking
+            Player.Character.Humanoid.HeadScale.Value = (1)--Change Value To Your Liking
+        elseif _G.Resized == false then
+            Player.Character.Humanoid.BodyHeightScale.Value = (1)--Do Not Change
+            Player.Character.Humanoid.BodyWidthScale.Value = (1)--Do Not Change
+            Player.Character.Humanoid.BodyDepthScale.Value = (1)--Do Not Change
+            Player.Character.Humanoid.HeadScale.Value = (1)--Do Not Change
+        end
+    end
 end)
 
 glitchfix.Name = "glitchfix"
