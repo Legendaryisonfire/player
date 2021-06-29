@@ -32,29 +32,33 @@ blockextender.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 blockextender.Position = UDim2.new(-0.00288806856, 0, -1.86264515e-09, 0)
 blockextender.Size = UDim2.new(0, 200, 0, 38)
 blockextender.Font = Enum.Font.GothamBold
-blockextender.Text = "Block Extender"
+blockextender.Text = "Block+Reach Extender"
 blockextender.TextColor3 = Color3.fromRGB(255, 255, 255)
 blockextender.TextScaled = true
 blockextender.TextSize = 14.000
 blockextender.TextWrapped = true
 blockextender.MouseButton1Down:connect(function()
-	_G.Resized = false
+	game.StarterGui:SetCore("SendNotification", {
+                Title = "Block+Reach Extender",
+                Text = "Q to turn on and off By Legendary#7357"
+            })
+_G.Resized = false
 
-	local Player = game:GetService('Players').LocalPlayer
-	local Mouse = Player:GetMouse()
+local Player = game:GetService('Players').LocalPlayer
+local Mouse = Player:GetMouse()
 
-	Mouse.KeyDown:Connect(function(Key)
-		if Key == 'q' then
-			_G.Resized = not _G.Resized
-			if _G.Resized == true then
-				Player.Character['LeftHand'].Size = Vector3.new(1, 10, 1)
-				Player.Character['RightHand'].Size = Vector3.new(1, 10, 1)
-			elseif _G.Resized == false then
-				Player.Character['LeftHand'].Size = Vector3.new(0.69334, 1.10182, 0.744331)
-				Player.Character['RightHand'].Size = Vector3.new(0.69334, 1.10182, 0.744331)
-			end
-		end
-	end)
+Mouse.KeyDown:Connect(function(Key)
+    if Key == 'q' then
+        _G.Resized = not _G.Resized
+        if _G.Resized == true then
+            Player.Character['LeftHand'].Size = Vector3.new(4.500, 10, 4.500)
+            Player.Character['RightHand'].Size = Vector3.new(4.500, 10, 4.500)
+        elseif _G.Resized == false then
+            Player.Character['LeftHand'].Size = Vector3.new(0.69334, 1.10182, 0.744331)
+            Player.Character['RightHand'].Size = Vector3.new(0.69334, 1.10182, 0.744331)
+        end
+    end
+end)
 end)
 
 close.Name = "close"
