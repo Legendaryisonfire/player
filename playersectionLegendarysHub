@@ -40,7 +40,7 @@ blockextender.TextWrapped = true
 blockextender.MouseButton1Down:connect(function()
 	game.StarterGui:SetCore("SendNotification", {
                 Title = "Block+Reach Extender",
-                Text = "Q to turn on and off By Legendary#7357"
+                Text = "Q to turn on and off By pd.legendary#7357"
             })
 _G.Resized = false
 
@@ -89,8 +89,8 @@ titanshifter.TextSize = 14.000
 titanshifter.TextWrapped = true
 titanshifter.MouseButton1Down:connect(function()
 	game.StarterGui:SetCore("SendNotification", {
-                Title = "Titan Shifter By Legendary",
-                Text = "P to turn on and off"
+                Title = "Titan Shifter",
+                Text = "P to turn on and off By pd.legendary#7357"
             })
 _G.Resized = false
 
